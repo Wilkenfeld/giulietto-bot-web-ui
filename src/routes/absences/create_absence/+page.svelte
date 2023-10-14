@@ -3,6 +3,7 @@
   import { page } from '$app/stores';
   let minDate = (new Date()).toISOString().slice(0, 10);
   let from;
+  const userId = $page.url.searchParams.get('user_id')
 </script>
 
 <!--link rel="stylesheet" href="../../styles/form.css"></link-->
