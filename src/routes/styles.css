@@ -119,6 +119,7 @@
 }
 
 :root {
+  --viewport-height: var(--tg-viewport-height, 100%);
   --background-color: var(--tg-theme-bg-color, grey);
   --secondary-background-color: var(--tg-theme-secondary-bg-color, darkgrey);
   --text-color: var(--tg-theme-text-color, white);
@@ -131,7 +132,7 @@
 }
 
 :root {
-  height: 100%;
+  height: var(--viewport-height);
   width: 100%;
 }
 
