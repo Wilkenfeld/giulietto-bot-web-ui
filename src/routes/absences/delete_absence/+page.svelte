@@ -3,6 +3,7 @@
 </script>
 
 <h1>Elimina assenza</h1>
+{#if data.absences.length > 0}
 <ul>
 {#each data.absences as ab}
     <li>
@@ -14,4 +15,7 @@
     </li>
 {/each}
 </ul>
+{:else}
+<p>Non ci sono assenze registrate</p>
+{/if}
 
