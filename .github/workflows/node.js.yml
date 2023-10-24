@@ -30,7 +30,7 @@ jobs:
     - run: npm run build --if-present
     - name: Deploy to server via SFTP
       uses: wlixcc/SFTP-Deploy-Action@v1.2.4
-       with:
+      with:
         # username
         username: {{ secrets.sftp_username }}
         # your sftp server
