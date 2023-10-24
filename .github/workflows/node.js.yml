@@ -32,15 +32,15 @@ jobs:
       uses: wlixcc/SFTP-Deploy-Action@v1.2.4
       with:
         # username
-        username: {{ secrets.sftp_username }}
+        username: ${{ secrets.sftp_username }}
         # your sftp server
-        server: {{ secrets.sftp_server }}
+        server: ${{ secrets.sftp_server }}
         # will put all file under this path
         local_path: ./build
         # files will copy to under remote_path
-        remote_path: ./gh-deploy/{{ github.event.repository.name }}
+        remote_path: ./gh-deploy/${{ github.event.repository.name }}
         # connection via sftp protocol only
         sftp_only: true
         # This operation will delete all files in the remote path before upload. Please be careful set this to true
         delete_remote_files: # optional
-        password: {{ secrets.sftp_password }}
+        password: ${{ secrets.sftp_password }}
